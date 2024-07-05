@@ -4,7 +4,7 @@ import java.util.List;
 public class SpiraMatrix {
 
     public List<Integer> spiralOrder(int[][] mac) {
-        List<Integer> res = new ArrayList<>();
+        List<Integer> res  = new ArrayList<>();
 
         if (mac.length == 0) {
             return res;
