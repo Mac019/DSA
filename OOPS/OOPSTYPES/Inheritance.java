@@ -1,3 +1,6 @@
+import Bank;
+
+
 // class Shape { // Base Class / Parent Class
 //     String color;
 // }
@@ -37,8 +40,13 @@ class Circle extends Shape{
 
 public class Inheritance {
     public static void main(String[] args) {
-        Triangle t1 = new Triangle();
-        t1.color = "red";
+        // Triangle t1 = new Triangle();
+        // t1.color = "red";
+        //Encapsulation
+
+        bank.Account acc1 = new bank.Account();
+        acc1.name = " Customer1";
+
 
         
     }
