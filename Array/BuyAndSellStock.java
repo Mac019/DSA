@@ -1,20 +1,20 @@
-public class BuyAndSellStock {
-    public static int buyStock(int mac[]){
-        for(int i = 0; i < mac.length - 1; i++){
-            if(mac[i] > mac[i + 1]){
-                int temp = mac[i];
-                mac[i] = mac[i + 1];
-                mac[i + 1] = temp;
-                return temp;
+class BuyAndSellStock {
+    public int maxProfit(int[] mac) {
+        int buy = mac[0];
+        int profit = 0;
+        for (int i = 1; i < mac.length; i++) {
+            if (mac[i] < buy) {
+                buy = mac[i];
+            } else if (mac[i] - buy > profit) {
+                profit = mac[i] - buy;
             }
         }
-        return -1; // Return a default value if no swap is done
+        return profit;
     }
 
     public static void main(String[] args) {
-        int mac[] = {1, 4, 5, 2, 3, 9};
-        int result = buyStock(mac);
-        System.out.println(result);
-       
+        BuyAndSellStock solution = new BuyAndSellStock();
+        int[] mac = {7, 1, 5, 3, 6, 4};
+        System.out.println("Max Profit: " + solution.maxProfit(mac));  // Output should be 5
     }
 }
