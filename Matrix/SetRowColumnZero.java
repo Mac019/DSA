@@ -55,7 +55,7 @@ class SetRowColumnZero {
     }
   
     public static void main(String[] args) {
-      Solution solution = new Solution();
+      SetRowColumnZero solution = new SetRowColumnZero();
       int[][] mac = {
         {1, 2, 3, 4},
         {5, 0, 7, 8},
@@ -68,7 +68,7 @@ class SetRowColumnZero {
       // Print the modified matrix
       for (int i = 0; i < mac.length; i++) {
         for (int j = 0; j < mac[0].length; j++) {
-          System.out.print(mac[i][j] + "    " );
+          System.out.print(mac[i][j] + " ");
         }
         System.out.println();
       }
